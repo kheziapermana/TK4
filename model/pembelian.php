@@ -100,7 +100,7 @@ class Pembelian
     function HitungTotalPembelian()
     {
         try {
-            $query = "SELECT SUM(HargaBeli) AS TotalPembelian FROM pembelian";
+            $query = "SELECT SUM(HargaBeli * JumlahPembelian) AS TotalPembelian FROM pembelian";
             $prepareDB = $this->clientDB->prepare($query);
             $prepareDB->execute();
             $result = $prepareDB->fetch();

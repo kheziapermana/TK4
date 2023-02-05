@@ -115,7 +115,7 @@ class Penjualan {
     function HitungTotalPenjualan()
     {
         try {
-            $query = "SELECT SUM(HargaJual) as TotalPenjualan FROM penjualan";
+            $query = "SELECT SUM(HargaJual * JumlahPenjualan) as TotalPenjualan FROM penjualan";
             $prepareDB = $this->clientDB->prepare($query);
             $prepareDB->execute();
             $result = $prepareDB->fetch();
