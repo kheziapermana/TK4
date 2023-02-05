@@ -4,7 +4,7 @@ class Database
         private $server = "localhost";
         private $username = "root";
         private $password = "root";
-        private $database = "tugasdatakhe";
+        private $database = "tk4";
 
         function koneksidatabase ()
         {
